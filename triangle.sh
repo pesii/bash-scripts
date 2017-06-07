@@ -13,11 +13,11 @@ if [[ side1 -eq REPLY ]] || [[ side2 -eq REPLY ]] || [[ side3 -eq REPLY ]]; then
 	echo "You didn't enter all the sides of the triangle!"
 	exit 1;
 # Handles side constraint
-elif (( $side1 <= 0 )) || (( $side1 >= 1000 )) || 
-	(( $side2 <= 0 )) || (( $side2 >= 1000 )) ||
-	(( $side3 <= 0 )) || (( $side3 >= 1000 )); 
+elif (( $side1 < 0 )) || (( $side1 > 1000 )) || 
+	(( $side2 < 0 )) || (( $side2 > 1000 )) ||
+	(( $side3 < 0 )) || (( $side3 > 1000 )); 
 then
-	echo "As a side constraint, your sides should be in [1,1000]"
+	echo "As a constraint, your sides should be in [1,1000]"
 	exit 1;
 fi
 
