@@ -3,7 +3,7 @@
 # The script takes user input on how many integers to read
 # it then reads those integers and output its average
 
-read -p "How many inputs [1,500] : " numInt
+read -p "How many integers would you like to sum: " numInt
 
 if [[ $numInt -gt 500 ]] || [[ $numInt -lt 1 ]]; then
 	echo "Number of inputs must be within [1,500]"
@@ -24,6 +24,7 @@ for((i=1; i<= numInt; i++)); do
 	fi
 done
 
-AVERAGE=$(eval "echo \"scale=3; $sum / $numInt\" | bc -l")
+AVERAGE=$(eval "echo \" scale=3; ($sum / $numInt) \" | bc -l")
+
 echo "The average is: $AVERAGE"
 
