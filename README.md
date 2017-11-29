@@ -1,2 +1,2 @@
 # bash-scripts
-Brushing up n bash scripting
+Brushing up on bash scripting
